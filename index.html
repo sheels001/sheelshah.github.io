@@ -20,7 +20,7 @@
 
     /* HERO */
     .hero {
-      height: auto; /* shrink to content so About Me shows immediately below */
+      height: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -93,25 +93,14 @@
     }
     .contact-links a:hover { opacity: 1; }
 
-    /* EXPERIENCE TIMELINE */
+    /* EXPERIENCE TIMELINE (NO LOGOS) */
     .timeline { border-left: 2px solid #333; padding-left: 30px; }
-    .item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 40px; position: relative; }
-    .item::before { content: ""; width: 12px; height: 12px; background: white; border-radius: 50%; position: absolute; left: -45px; top: 6px; }
+    .item { margin-bottom: 40px; position: relative; }
+    .item::before { content: ""; width: 12px; height: 12px; background: white; border-radius: 50%; position: absolute; left: -37px; top: 6px; }
     .card { background: #0f0f0f; padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
     .company { font-weight: 500; }
     .role { opacity: 0.7; font-size: 0.9rem; }
     .date { opacity: 0.5; font-size: 0.8rem; margin-top: 5px; }
-
-    /* EXPERIENCE / PROJECT LOGOS */
-    .logo { width: 56px; height: 56px; flex-shrink: 0; margin-top: 4px; }
-    .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 8px; /* square logos stay as squares with rounded corners */
-      background: #111;
-      opacity: 0.9;
-    }
 
     /* PROJECTS GRID */
     .projects { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
@@ -120,11 +109,6 @@
     .project img { width: 100%; height: auto; border-radius: 8px; object-fit: cover; margin-bottom: 12px; }
     .project-caption { font-weight: 500; margin-bottom: 6px; }
     .project-desc { opacity: 0.7; font-size: 0.9rem; }
-
-    /* CONTACT SECTION (OPTIONAL) */
-    .contact { text-align: center; }
-    .email { display: inline-block; margin-top: 20px; color: white; text-decoration: none; border-bottom: 1px solid #333; padding-bottom: 4px; opacity: 0.8; }
-    .email:hover { opacity: 1; }
 
     /* RESPONSIVE */
     @media (max-width: 700px) {
@@ -163,12 +147,11 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE PANEL -->
+  <!-- EXPERIENCE PANEL (NO LOGOS) -->
   <section id="experience" class="panel">
     <h2>Experience</h2>
     <div class="timeline">
       <div class="item">
-        <div class="logo"><img src="images/microsoft.png" alt="Microsoft logo"></div>
         <div class="card">
           <div class="company">Microsoft</div>
           <div class="role">Software Engineer Intern</div>
@@ -176,7 +159,6 @@
         </div>
       </div>
       <div class="item">
-        <div class="logo"><img src="images/lavalab.png" alt="Lavalab logo"></div>
         <div class="card">
           <div class="company">Lavalab</div>
           <div class="role">Director of Development</div>
@@ -184,7 +166,6 @@
         </div>
       </div>
       <div class="item">
-        <div class="logo"><img src="images/foreflight.png" alt="Foreflight logo"></div>
         <div class="card">
           <div class="company">Foreflight</div>
           <div class="role">Software Engineer Intern</div>
@@ -192,7 +173,6 @@
         </div>
       </div>
       <div class="item">
-        <div class="logo"><img src="images/nasa.png" alt="NASA logo"></div>
         <div class="card">
           <div class="company">NASA</div>
           <div class="role">Research Intern</div>
@@ -216,7 +196,7 @@
         <div class="project-caption">FPV Drone Control System</div>
         <div class="project-desc">Motor control, PID tuning, and power electronics for high-performance drones.</div>
       </div>
-      <!-- Add 4 more projects similarly -->
+      <!-- Add more projects similarly -->
     </div>
   </section>
 
