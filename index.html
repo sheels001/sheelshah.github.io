@@ -29,6 +29,24 @@
       padding: 60px 20px;
       position: relative;
     }
+
+    /* PROFILE IMAGE BELOW HERO */
+.profile-pic {
+  margin-top: 20px;   /* spacing below your name */
+  margin-bottom: 40px; /* spacing above About Me */
+  width: 160px;        /* adjust size as desired */
+  height: 160px;
+  border-radius: 50%;  /* circular image */
+  overflow: hidden;
+  border: 3px solid #555; /* optional subtle border */
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures image fills circle */
+}
+
     .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 300; letter-spacing: 0.05em; }
     .cursor::after { content: "|"; animation: blink 1s infinite; }
     @keyframes blink { 50% { opacity: 0; } }
@@ -114,7 +132,12 @@
   <!-- HERO -->
   <div class="hero">
     <h1 class="cursor">Sheel Shah</h1>
+
+    <div class="profile-pic">
+      <img src="images/profile.jpg" alt="Sheel Shah">
+    </div>
   </div>
+
 
   <!-- TABS -->
   <nav class="tabs">
