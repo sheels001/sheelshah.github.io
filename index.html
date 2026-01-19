@@ -2,63 +2,167 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sheel Shah</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500&display=swap" rel="stylesheet">
+
   <style>
+    * { box-sizing: border-box; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #111;
+      margin: 0;
+      font-family: 'JetBrains Mono', monospace;
+      background: black;
+      color: white;
+      overflow-x: hidden;
     }
-    h1 { font-size: 2.5rem; }
-    h2 { margin-top: 2rem; }
-    a { color: #0066cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .links a { margin-right: 15px; }
-    .project { margin-bottom: 1rem; }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+
+    .cursor::after {
+      content: "|";
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .subtitle {
+      opacity: 0.7;
+      margin-top: 10px;
+    }
+
+    .scroll {
+      position: absolute;
+      bottom: 30px;
+      opacity: 0.5;
+      font-size: 0.8rem;
+    }
+
+    /* EXPERIENCE */
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+
+    .timeline {
+      border-left: 2px solid #333;
+      padding-left: 30px;
+    }
+
+    .item {
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .item::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      left: -37px;
+      top: 6px;
+    }
+
+    .card {
+      background: #0f0f0f;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    .company {
+      font-weight: 500;
+    }
+
+    .role {
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    .date {
+      opacity: 0.5;
+      font-size: 0.8rem;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
 
-<h1>Your Name</h1>
-<p><strong>Engineer | Builder | Entrepreneur</strong></p>
+  <!-- HERO -->
+  <div class="hero">
+    <h1 class="cursor">Sheel Shah</h1>
+    <div class="subtitle">Engineer · Builder · Research</div>
+    <div class="scroll">↓ see more</div>
+  </div>
 
-<p>
-Short bio here. One paragraph max.  
-What you’re building, what you’re interested in, and what problems you like solving.
-</p>
+  <!-- EXPERIENCE -->
+  <section>
+    <h2>Experience</h2>
 
-<div class="links">
-  <a href="https://github.com/yourusername">GitHub</a>
-  <a href="https://linkedin.com/in/yourname">LinkedIn</a>
-  <a href="https://twitter.com/yourhandle">Twitter</a>
-  <a href="mailto:you@email.com">Email</a>
-</div>
+    <div class="timeline">
 
-<h2>Experience</h2>
-<ul>
-  <li><strong>Role / Company</strong> – one-line impact statement</li>
-  <li><strong>Role / Organization</strong> – one-line impact statement</li>
-</ul>
+      <div class="item">
+        <div class="card">
+          <div class="company">Microsoft</div>
+          <div class="role">Software Engineer Intern</div>
+          <div class="date">Summer 2025</div>
+        </div>
+      </div>
 
-<h2>Projects</h2>
-<div class="project">
-  <strong>Project Name</strong> – one sentence on what it does  
-  <br />
-  <a href="https://github.com/yourusername/project">GitHub</a>
-</div>
+      <div class="item">
+        <div class="card">
+          <div class="company">Lavalab</div>
+          <div class="role">Director of Development</div>
+          <div class="date">2025 – Present</div>
+        </div>
+      </div>
 
-<div class="project">
-  <strong>Project Name</strong> – one sentence on what problem it solves
-</div>
+      <div class="item">
+        <div class="card">
+          <div class="company">Foreflight</div>
+          <div class="role">Software Engineer Intern</div>
+          <div class="date">Summer 2024</div>
+        </div>
+      </div>
 
-<h2>Currently</h2>
-<p>
-What you’re focused on right now.
-</p>
+      <div class="item">
+        <div class="card">
+          <div class="company">NASA</div>
+          <div class="role">Research Intern</div>
+          <div class="date">Summer 2022</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 </body>
 </html>
